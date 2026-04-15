@@ -1,46 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>League of Players</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="home-body">
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
 
-<div class="bg-animation"></div>
+  <header class="navbar">
+    <div class="logo">League of Players</div>
+    <nav class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="login.html">Login</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
 
-<header class="navbar">
-  <div class="logo">League of Players</div>
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="login.html">Login</a>
-    <a href="dashboard.html">Ranking</a>
-  </nav>
-</header>
+  <main class="hero-section">
+    <section class="hero-left">
+      <span class="tag">Plataforma de stats para League of Legends</span>
+      <h1>Domine o Rift com dados, ranking e desempenho.</h1>
+      <p>
+        Pesquise jogadores, acompanhe evolução, veja estatísticas e prepare
+        seu projeto para integração real com a Riot API.
+      </p>
 
-<main class="hero">
-  <div class="hero-content">
-    <h1>Domine o Rift</h1>
-    <p>Veja estatísticas, ranking e jogadas</p>
-    <a class="btn-primary" href="login.html">Entrar</a>
-  </div>
-</main>
+      <div class="search-box">
+        <input type="text" id="summonerInput" placeholder="Digite o nick do jogador" />
+        <button id="searchBtn">Buscar jogador</button>
+      </div>
 
-<script src="script.js"></script>
-</body>
-</html>
-<body>
+      <div class="hero-actions">
+        <a class="btn-primary" href="login.html">Entrar</a>
+        <a class="btn-secondary" href="dashboard.html">Ver dashboard</a>
+      </div>
 
-<h1>League of Players</h1>
-<p>Domine o ranking. Analise suas jogadas.</p>
+      <p class="search-hint" id="searchHint"></p>
+    </section>
 
-<button class="btn" onclick="entrar()">START</button>
+    <section class="hero-right">
+      <div class="panel panel-main">
+        <div class="panel-header">
+          <span>Status do projeto</span>
+          <span class="status-online">Online</span>
+        </div>
 
-<script>
-function entrar(){
-  alert("Sistema em construção...");
-}
-</script>
+        <div class="panel-grid">
+          <div class="mini-card">
+            <h3>Rankings</h3>
+            <p>Visual competitivo pronto para evolução.</p>
+          </div>
+          <div class="mini-card">
+            <h3>Jogadores</h3>
+            <p>Busca preparada para dados reais da Riot.</p>
+          </div>
+          <div class="mini-card">
+            <h3>Win Rate</h3>
+            <p>Análises e estatísticas em destaque.</p>
+          </div>
+          <div class="mini-card">
+            <h3>Projeto</h3>
+            <p>Base profissional para aprovação e expansão.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <section class="features-section">
+    <div class="feature-card">
+      <h3>Busca rápida</h3>
+      <p>Pesquise jogadores e prepare a integração com backend.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Dashboard gamer</h3>
+      <p>Visual mais forte para impressionar usuários e parceiros.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Base para monetização</h3>
+      <p>Projeto com cara de produto, não só de exercício.</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
