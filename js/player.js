@@ -55,3 +55,4 @@ playerSearchBtn.addEventListener("click", () => {
 
   searchPlayer(input);
 });
+
