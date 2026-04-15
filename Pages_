@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jogador | League of Players</title>
-  <link rel="stylesheet" href="../style.css" />
+  <title>Dashboard | League of Players</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="dashboard-body">
   <div class="bg-glow bg-glow-1"></div>
@@ -13,44 +13,72 @@
   <header class="navbar">
     <div class="logo">League of Players</div>
     <nav class="nav-links">
-      <a href="../index.html">Início</a>
-      <a href="../login.html">Login</a>
-      <a href="../dashboard.html">Dashboard</a>
-      <a href="player.html">Jogador</a>
+      <a href="index.html">Início</a>
+      <a href="pages/player.html">Jogador</a>
+      <a href="pages/ranking.html">Ranking</a>
+      <a href="pages/champions.html">Campeões</a>
+      <a href="pages/compare.html">Comparar</a>
+      <a href="pages/pro.html">Pro</a>
+      <a href="pages/guides.html">Guias</a>
     </nav>
   </header>
 
   <main class="dashboard">
     <section class="welcome-card">
-      <h2 id="playerTitle">Perfil do Jogador</h2>
-      <p id="playerSubtitle">Pesquise um jogador para ver as estatísticas.</p>
+      <h2 id="welcomeText">Bem-vindo, jogador</h2>
+      <p>Painel inicial da plataforma.</p>
     </section>
 
     <section class="stats-grid">
       <div class="stat-card">
-        <h3>Nível</h3>
-        <p id="playerLevel">--</p>
+        <h3>Busca</h3>
+        <p>Jogadores</p>
       </div>
       <div class="stat-card">
-        <h3>ID</h3>
-        <p id="playerId">--</p>
+        <h3>Comparar</h3>
+        <p>Perfis</p>
       </div>
       <div class="stat-card">
-        <h3>Conta</h3>
-        <p id="playerAccount">--</p>
+        <h3>Plano</h3>
+        <p>Starter</p>
       </div>
     </section>
 
     <section class="ranking-table-section">
-      <h2>Buscar jogador</h2>
-      <div class="search-box">
-        <input type="text" id="playerSearchInput" placeholder="Digite o nick do jogador" />
-        <button id="playerSearchBtn">Buscar</button>
-      </div>
-      <p class="search-hint" id="playerSearchHint"></p>
+      <h2>Atalhos da plataforma</h2>
+      <table class="ranking-table">
+        <thead>
+          <tr>
+            <th>Área</th>
+            <th>Objetivo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jogador</td>
+            <td>Buscar perfis por Riot ID</td>
+          </tr>
+          <tr>
+            <td>Ranking</td>
+            <td>Top jogadores e filtros</td>
+          </tr>
+          <tr>
+            <td>Campeões</td>
+            <td>Tier, popularidade e counters</td>
+          </tr>
+          <tr>
+            <td>Comparar</td>
+            <td>Comparar dois perfis lado a lado</td>
+          </tr>
+          <tr>
+            <td>Pro</td>
+            <td>Converter usuários em assinantes</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </main>
 
-  <script src="../js/player.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
