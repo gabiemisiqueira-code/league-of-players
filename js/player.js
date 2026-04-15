@@ -1,53 +1,43 @@
-const express = require("express");
-const axios = require("axios");
-const cors = require("cors");
+const input = document.getElementById("playerSearchInput");
+const button = document.getElementById("playerSearchBtn");
+const hint = document.getElementById("playerSearchHint");
+const playerName = document.getElementById("playerName");
+const playerLevel = document.getElementById("playerLevel");
+const playerId = document.getElementById("playerId");
 
-const app = express();
-app.use(cors());
+button.onclick = async () => {
+  const value = input.value.trim();
 
-const API_KEY = "SUA_CHAVE_RIOT_AQUI";
-
-app.get("/", (req, res) => {
-  res.send("Servidor Riot funcionando");
-});
-
-app.get("/player/:gameName/:tagLine", async (req, res) => {
-  try {
-    const { gameName, tagLine } = req.params;
-
-    const accountResponse = await axios.get(
-      `https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${encodeURIComponent(gameName)}/${encodeURIComponent(tagLine)}`,
-      {
-        headers: {
-          "X-Riot-Token": API_KEY
-        }
-      }
-    );
-
-    const puuid = accountResponse.data.puuid;
-
-    const summonerResponse = await axios.get(
-      `https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}`,
-      {
-        headers: {
-          "X-Riot-Token": API_KEY
-        }
-      }
-    );
-
-    res.json({
-      gameName,
-      tagLine,
-      ...summonerResponse.data
-    });
-  } catch (error) {
-    res.status(error.response?.status || 500).json({
-      erro: "Erro ao buscar jogador",
-      detalhe: error.response?.data || error.message
-    });
+  if (!value.includes("#")) {
+    hint.textContent = "Use formato: Nome#TAG";
+    return;
   }
-});
 
-app.listen(3000, () => {
-  console.log("Servidor rodando em http://localhost:3000");
+  const parts = value.split("#");
+  const name = parts[0];
+  const tag = parts[1];
+
+  hint.textContent = "Buscando...";
+
+  try {
+    const res = await fetch(`http://localhost:3000/player/${encodeURIComponent(name)}/${encodeURIComponent(tag)}`);
+    const data = await res.json();
+
+    if (!res.ok) {
+      hint.textContent = data.erro || "Erro ao buscar jogador";
+      return;
+    }
+
+    playerName.textContent = `${data.gameName || name}#${data.tagLine || tag}`;
+    playerLevel.textContent = data.summonerLevel || "--";
+    playerId.textContent = data.id || "--";
+    hint.textContent = "Jogador encontrado!";
+  } catch {
+    hint.textContent = "Erro ao conectar com backend";
+  }
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+  const saved = localStorage.getItem("searched_player");
+  if (saved && input) input.value = saved;
 });
