@@ -1,43 +1,59 @@
-const input = document.getElementById("playerSearchInput");
-const button = document.getElementById("playerSearchBtn");
-const hint = document.getElementById("playerSearchHint");
-const playerName = document.getElementById("playerName");
-const playerLevel = document.getElementById("playerLevel");
-const playerId = document.getElementById("playerId");
+const express = require("express");
+const axios = require("axios");
+const cors = require("cors");
 
-button.onclick = async () => {
-  const value = input.value.trim();
+const app = express();
+app.use(cors());
 
-  if (!value.includes("#")) {
-    hint.textContent = "Use formato: Nome#TAG";
-    return;
-  }
+const PORT = process.env.PORT || 3000;
+const API_KEY = process.env.RIOT_API_KEY;
 
-  const parts = value.split("#");
-  const name = parts[0];
-  const tag = parts[1];
+// rota teste
+app.get("/", (req, res) => {
+  res.send("Servidor Riot online 🚀");
+});
 
-  hint.textContent = "Buscando...";
-
+// rota principal
+app.get("/player/:gameName/:tagLine", async (req, res) => {
   try {
-    const res = await fetch(`http://localhost:3000/player/${encodeURIComponent(name)}/${encodeURIComponent(tag)}`);
-    const data = await res.json();
+    const { gameName, tagLine } = req.params;
 
-    if (!res.ok) {
-      hint.textContent = data.erro || "Erro ao buscar jogador";
-      return;
-    }
+    // 1. pegar PUUID
+    const accountResponse = await axios.get(
+      `https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${encodeURIComponent(gameName)}/${encodeURIComponent(tagLine)}`,
+      {
+        headers: {
+          "X-Riot-Token": API_KEY
+        }
+      }
+    );
 
-    playerName.textContent = `${data.gameName || name}#${data.tagLine || tag}`;
-    playerLevel.textContent = data.summonerLevel || "--";
-    playerId.textContent = data.id || "--";
-    hint.textContent = "Jogador encontrado!";
-  } catch {
-    hint.textContent = "Erro ao conectar com backend";
+    const puuid = accountResponse.data.puuid;
+
+    // 2. pegar dados do jogador
+    const summonerResponse = await axios.get(
+      `https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}`,
+      {
+        headers: {
+          "X-Riot-Token": API_KEY
+        }
+      }
+    );
+
+    res.json({
+      gameName,
+      tagLine,
+      ...summonerResponse.data
+    });
+
+  } catch (error) {
+    res.status(error.response?.status || 500).json({
+      erro: "Erro ao buscar jogador",
+      detalhe: error.response?.data || error.message
+    });
   }
-};
+});
 
-window.addEventListener("DOMContentLoaded", () => {
-  const saved = localStorage.getItem("searched_player");
-  if (saved && input) input.value = saved;
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
