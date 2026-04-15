@@ -1,37 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Dashboard</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | League of Players</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="dashboard-body">
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
 
-<header class="navbar">
-  <div class="logo">League of Players</div>
-</header>
+  <header class="navbar">
+    <div class="logo">League of Players</div>
+    <nav class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="login.html">Login</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="pages/player.html">Jogador</a>
+    </nav>
+  </header>
 
-<main class="dashboard">
+  <main class="dashboard">
+    <section class="welcome-card">
+      <h2 id="welcomeText">Bem-vindo, jogador</h2>
+      <p>Análise rápida do cenário competitivo.</p>
+    </section>
 
-<h1 id="welcomeText"></h1>
+    <section class="stats-grid">
+      <div class="stat-card">
+        <h3>Top 1</h3>
+        <p>AatroxKing</p>
+      </div>
+      <div class="stat-card">
+        <h3>Top 2</h3>
+        <p>ShadowFaker</p>
+      </div>
+      <div class="stat-card">
+        <h3>Top 3</h3>
+        <p>VoidHunter</p>
+      </div>
+    </section>
 
-<div class="cards">
-  <div class="card">🏆 Rank: Challenger</div>
-  <div class="card">🔥 Winrate: 68%</div>
-  <div class="card">⚔️ Main: Yasuo</div>
-</div>
+    <section class="ranking-table-section">
+      <h2>Ranking dos Jogadores</h2>
+      <table class="ranking-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Jogador</th>
+            <th>Elo</th>
+            <th>Win Rate</th>
+            <th>Main</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>AatroxKing</td>
+            <td>Challenger</td>
+            <td>68%</td>
+            <td>Aatrox</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>ShadowFaker</td>
+            <td>Grandmaster</td>
+            <td>64%</td>
+            <td>Ahri</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>VoidHunter</td>
+            <td>Master</td>
+            <td>61%</td>
+            <td>Kha'Zix</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>StormBlade</td>
+            <td>Diamond I</td>
+            <td>59%</td>
+            <td>Yasuo</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 
-<h2>Ranking Global</h2>
-
-<table class="ranking">
-<tr><th>#</th><th>Player</th><th>Elo</th></tr>
-<tr><td>1</td><td>AatroxKing</td><td>Challenger</td></tr>
-<tr><td>2</td><td>ShadowFaker</td><td>Grandmaster</td></tr>
-<tr><td>3</td><td>VoidHunter</td><td>Master</td></tr>
-</table>
-
-</main>
-
-<script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
