@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparar | League of Players</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="dashboard-body">
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <header class="navbar">
+    <div class="logo">League of Players</div>
+    <nav class="nav-links">
+      <a href="../index.html">Início</a>
+      <a href="player.html">Jogador</a>
+      <a href="ranking.html">Ranking</a>
+      <a href="champions.html">Campeões</a>
+      <a href="compare.html">Comparar</a>
+      <a href="pro.html">Pro</a>
+      <a href="guides.html">Guias</a>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <section class="page-head">
+      <h1>Comparar Jogadores</h1>
+      <p>Ferramenta ideal para gerar retorno e retenção.</p>
+    </section>
+
+    <section class="compare-grid">
+      <div class="ranking-table-section">
+        <h2>Jogador A</h2>
+        <input class="simple-input" type="text" placeholder="Nome#TAG" />
+      </div>
+      <div class="ranking-table-section">
+        <h2>Jogador B</h2>
+        <input class="simple-input" type="text" placeholder="Nome#TAG" />
+      </div>
+    </section>
+
+    <section class="ranking-table-section">
+      <h2>Resultado da comparação</h2>
+      <table class="ranking-table">
+        <thead>
+          <tr>
+            <th>Métrica</th>
+            <th>Jogador A</th>
+            <th>Jogador B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Nível</td><td>--</td><td>--</td></tr>
+          <tr><td>Elo</td><td>--</td><td>--</td></tr>
+          <tr><td>Win Rate</td><td>--</td><td>--</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../js/compare.js"></script>
+</body>
+</html>
