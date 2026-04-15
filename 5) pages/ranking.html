@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ranking | League of Players</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="dashboard-body">
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <header class="navbar">
+    <div class="logo">League of Players</div>
+    <nav class="nav-links">
+      <a href="../index.html">Início</a>
+      <a href="player.html">Jogador</a>
+      <a href="ranking.html">Ranking</a>
+      <a href="champions.html">Campeões</a>
+      <a href="compare.html">Comparar</a>
+      <a href="pro.html">Pro</a>
+      <a href="guides.html">Guias</a>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <section class="page-head">
+      <h1>Ranking Global</h1>
+      <p>Base visual para ranking, filtros e monetização.</p>
+    </section>
+
+    <section class="ranking-table-section">
+      <h2>Top jogadores</h2>
+      <table class="ranking-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Jogador</th>
+            <th>Elo</th>
+            <th>Win Rate</th>
+            <th>Main</th>
+          </tr>
+        </thead>
+        <tbody id="rankingTableBody">
+          <tr><td>1</td><td>Faker</td><td>Challenger</td><td>67%</td><td>Ahri</td></tr>
+          <tr><td>2</td><td>ShadowKing</td><td>Grandmaster</td><td>64%</td><td>Yasuo</td></tr>
+          <tr><td>3</td><td>VoidOne</td><td>Master</td><td>61%</td><td>Kha'Zix</td></tr>
+          <tr><td>4</td><td>StormBR</td><td>Diamond I</td><td>59%</td><td>Aatrox</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../js/ranking.js"></script>
+</body>
+</html>
