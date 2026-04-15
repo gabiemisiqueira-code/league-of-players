@@ -1,4 +1,4 @@
-const BACKEND_URL = "https://SEU-BACKEND.onrender.com"; // depois você troca
+const BACKEND_URL = "https://https://league-of-players.onrender.com"; // depois você troca
 
 const input = document.getElementById("playerSearchInput");
 const button = document.getElementById("playerSearchBtn");
