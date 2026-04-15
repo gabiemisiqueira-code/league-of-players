@@ -1,35 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>League of Players</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: black;
-      color: white;
-      text-align: center;
-    }
-    h1 {
-      color: gold;
-    }
-    .btn {
-      padding: 15px 30px;
-      background: purple;
-      border: none;
-      color: white;
-      font-size: 18px;
-      border-radius: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body class="home-body">
+
+<div class="bg-animation"></div>
+
+<header class="navbar">
+  <div class="logo">League of Players</div>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Ranking</a>
+  </nav>
+</header>
+
+<main class="hero">
+  <div class="hero-content">
+    <h1>Domine o Rift</h1>
+    <p>Veja estatísticas, ranking e jogadas</p>
+    <a class="btn-primary" href="login.html">Entrar</a>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
 <body>
 
-  <h1>League of Players</h1>
-  <p>Ranking, estatísticas e jogadas de League of Legends</p>
+<h1>League of Players</h1>
+<p>Domine o ranking. Analise suas jogadas.</p>
 
-  <button class="btn">Entrar</button>
+<button class="btn" onclick="entrar()">START</button>
+
+<script>
+function entrar(){
+  alert("Sistema em construção...");
+}
+</script>
 
 </body>
 </html>
