@@ -1,6 +1,6 @@
 const reveals = document.querySelectorAll('.reveal');
 
-const revealOnScroll = () => {
+function revealOnScroll() {
   const triggerBottom = window.innerHeight * 0.88;
 
   reveals.forEach((item) => {
@@ -10,7 +10,7 @@ const revealOnScroll = () => {
       item.classList.add('active-reveal');
     }
   });
-};
+}
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
