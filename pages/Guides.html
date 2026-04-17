@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guias - League of Players</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>League of Players</h1>
+    <nav>
+      <a href="/ranking">Home</a>
+      <a href="/champions">Campeões</a>
+      <a href="/player">Jogador</a>
+      <a href="/compare">Comparar</a>
+      <a href="/guides">Guias</a>
+      <a href="/pro">Pro Players</a>
+    </nav>
+  </header>
+
+  <section class="hero" style="
+    background:
+    linear-gradient(rgba(5, 10, 20, 0.6), rgba(5, 10, 20, 0.85)),
+    url('/img/banner.jpg') center/cover no-repeat;
+  ">
+    <div class="hero-content">
+      <div class="badge">Itens e spells</div>
+      <h2>Guias automáticos</h2>
+      <p>Itens e summoner spells puxados direto da base oficial.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="reveal">
+      <h2 class="section-title">Itens em destaque</h2>
+      <div id="itemsList" class="card-grid"></div>
+    </section>
+
+    <section class="reveal" style="margin-top: 40px;">
+      <h2 class="section-title">Summoner Spells</h2>
+      <div id="spellsList" class="card-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    League of Players © 2026
+  </footer>
+
+  <script src="/guides.js"></script>
+  <script src="/animations.js"></script>
+</body>
+</html>
