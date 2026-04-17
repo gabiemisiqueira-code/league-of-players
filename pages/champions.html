@@ -22,4 +22,32 @@
   <section class="hero" style="
     background:
     linear-gradient(rgba(5, 10, 20, 0.6), rgba(5, 10, 20, 0.85)),
-    url('/img/banner.jpg
+    url('/img/banner.jpg') center/cover no-repeat;
+  ">
+    <div class="hero-content">
+      <div class="badge">Automático</div>
+      <h2>Todos os campeões</h2>
+      <p>Busca e listagem automática com imagens oficiais.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="reveal">
+      <h2 class="section-title">Campeões</h2>
+
+      <div class="search-box" style="margin-bottom: 24px;">
+        <input id="championSearch" type="text" placeholder="Buscar campeão...">
+      </div>
+
+      <div id="championsList" class="card-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    League of Players © 2026
+  </footer>
+
+  <script src="/champions.js"></script>
+  <script src="/animations.js"></script>
+</body>
+</html>
