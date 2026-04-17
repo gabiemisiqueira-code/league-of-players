@@ -1,129 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jogador | League of Players</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogador - League of Players</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="dashboard-body">
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
-
-  <header class="navbar">
-    <div class="logo">League of Players</div>
-    <nav class="nav-links">
-      <a href="../index.html">Início</a>
-      <a href="../login.html">Login</a>
-      <a href="../dashboard.html">Dashboard</a>
-      <a href="player.html">Jogador</a>
+<body>
+  <header>
+    <h1>League of Players</h1>
+    <nav>
+      <a href="/ranking">Ranking</a>
+      <a href="/champions">Campeões</a>
+      <a href="/player">Jogador</a>
+      <a href="/compare">Comparar</a>
+      <a href="/guides">Guias</a>
+      <a href="/pro">Pro Players</a>
     </nav>
   </header>
 
-  <main class="dashboard">
-    <section class="player-hero-card">
-      <div class="player-hero-left">
-        <span class="tag">Perfil premium do invocador</span>
-        <h1 id="playerTitle">Perfil do Jogador</h1>
-        <p id="playerSubtitle">Pesquise um jogador para ver estatísticas, evolução e recursos premium.</p>
+  <section class="hero" style="background:
+    linear-gradient(rgba(5, 10, 20, 0.55), rgba(5, 10, 20, 0.82)),
+    url('/img/players/player1.jpg') center/cover no-repeat;">
+    <div class="hero-content">
+      <h2>Pesquise jogadores e veja seu desempenho</h2>
+      <p>Histórico, campeões favoritos, taxa de vitória, KDA e muito mais.</p>
+    </div>
+  </section>
 
-        <div class="search-box premium-search-box">
-          <input type="text" id="playerSearchInput" placeholder="Digite o nick do jogador" />
-          <button id="playerSearchBtn">Buscar</button>
-        </div>
+  <main class="container">
+    <h2 class="section-title">Perfil em Destaque</h2>
 
-        <p class="search-hint" id="playerSearchHint"></p>
-      </div>
-
-      <div class="player-hero-right">
-        <div class="player-status-card">
-          <div class="panel-header">
-            <span>Status da análise</span>
-            <span class="status-online" id="playerStatusBadge">Pronto</span>
-          </div>
-
-          <div class="quick-info-list">
-            <div class="quick-info-item">
-              <span>Modo</span>
-              <strong>Perfil Competitivo</strong>
-            </div>
-            <div class="quick-info-item">
-              <span>Backend</span>
-              <strong>Node + Riot API</strong>
-            </div>
-            <div class="quick-info-item">
-              <span>Plano</span>
-              <strong>Starter</strong>
-            </div>
-          </div>
+    <div class="highlight-row">
+      <div class="feature-box">
+        <img src="/img/players/player1.jpg" alt="Perfil do jogador">
+        <div class="text">
+          <h3>Summoner: ShadowCarry</h3>
+          <p>Rank: Mestre<br>Win Rate: 63%<br>KDA: 5.2<br>Função principal: Mid Lane</p>
         </div>
       </div>
-    </section>
 
-    <section class="stats-grid premium-stats-grid">
-      <div class="stat-card premium-stat-card">
-        <h3>Nível</h3>
-        <p id="playerLevel">--</p>
-      </div>
-      <div class="stat-card premium-stat-card">
-        <h3>ID</h3>
-        <p id="playerId">--</p>
-      </div>
-      <div class="stat-card premium-stat-card">
-        <h3>Conta</h3>
-        <p id="playerAccount">--</p>
-      </div>
-      <div class="stat-card premium-stat-card">
-        <h3>Região</h3>
-        <p id="playerRegion">BR1</p>
-      </div>
-    </section>
-
-    <section class="premium-layout-grid">
-      <section class="ranking-table-section premium-section">
-        <h2>Resumo do jogador</h2>
-        <div class="summary-grid">
-          <div class="summary-card">
-            <span class="summary-label">Perfil</span>
-            <strong id="summaryProfile">Aguardando busca</strong>
-            <p>Nome e identificação principal do invocador.</p>
-          </div>
-
-          <div class="summary-card">
-            <span class="summary-label">Evolução</span>
-            <strong id="summaryProgress">Em breve</strong>
-            <p>Histórico, desempenho e evolução ficarão aqui.</p>
-          </div>
-
-          <div class="summary-card">
-            <span class="summary-label">Campeões</span>
-            <strong>Premium</strong>
-            <p>Área ideal para mostrar mains, picks e win rate.</p>
-          </div>
-
-          <div class="summary-card">
-            <span class="summary-label">Insights</span>
-            <strong>IA pronta</strong>
-            <p>Espaço para recomendações e recursos pagos.</p>
-          </div>
-        </div>
-      </section>
-
-      <aside class="premium-side-column">
-        <section class="premium-box monetization-box">
-          <h3>League of Players Pro</h3>
-          <p>Desbloqueie análise avançada, favoritos, insights automáticos e comparação entre jogadores.</p>
-          <button class="btn-primary premium-upgrade-btn">Fazer upgrade</button>
-        </section>
-
-        <section class="premium-box ad-box">
-          <h3>Espaço estratégico</h3>
-          <p>Aqui pode entrar anúncio, parceiro, afiliado ou oferta premium do seu produto.</p>
-        </section>
-      </aside>
-    </section>
-  </main>
-
-  <script src="../js/player.js"></script>
-</body>
-</html>
+      <div class="side-box">
+        <img src="/img/champions/ahri.jpg" alt="Campeão favorito">
+        <div class="text">
+          <h3>Campeão Mais Jogado</h3>
+          <p>Ah
