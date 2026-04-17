@@ -6,11 +6,13 @@
   <title>Jogador - League of Players</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
+  <!-- HEADER -->
   <header>
     <h1>League of Players</h1>
     <nav>
-      <a href="/ranking">Ranking</a>
+      <a href="/ranking">Home</a>
       <a href="/champions">Campeões</a>
       <a href="/player">Jogador</a>
       <a href="/compare">Comparar</a>
@@ -19,29 +21,129 @@
     </nav>
   </header>
 
-  <section class="hero" style="background:
-    linear-gradient(rgba(5, 10, 20, 0.55), rgba(5, 10, 20, 0.82)),
-    url('/img/players/player1.jpg') center/cover no-repeat;">
+  <!-- HERO -->
+  <section class="hero" style="
+    background:
+    linear-gradient(rgba(5, 10, 20, 0.6), rgba(5, 10, 20, 0.85)),
+    url('/img/players/player1.jpg') center/cover no-repeat;
+  ">
     <div class="hero-content">
-      <h2>Pesquise jogadores e veja seu desempenho</h2>
-      <p>Histórico, campeões favoritos, taxa de vitória, KDA e muito mais.</p>
+      <div class="badge">Perfil do jogador</div>
+      <h2>Dados e desempenho em tempo real</h2>
+      <p>
+        Veja estatísticas, campeões mais jogados, histórico recente e performance geral.
+      </p>
     </div>
   </section>
 
+  <!-- CONTEÚDO PRINCIPAL -->
   <main class="container">
-    <h2 class="section-title">Perfil em Destaque</h2>
 
-    <div class="highlight-row">
-      <div class="feature-box">
-        <img src="/img/players/player1.jpg" alt="Perfil do jogador">
-        <div class="text">
-          <h3>Summoner: ShadowCarry</h3>
-          <p>Rank: Mestre<br>Win Rate: 63%<br>KDA: 5.2<br>Função principal: Mid Lane</p>
+    <!-- PERFIL -->
+    <section class="reveal">
+      <h2 class="section-title">Perfil do Jogador</h2>
+
+      <div class="highlight-row">
+        <div class="feature-box">
+          <img src="/img/players/player1.jpg" alt="Jogador">
+          <div class="text">
+            <h3 id="playerName">Carregando...</h3>
+            <p id="playerInfo">Buscando informações do jogador...</p>
+          </div>
+        </div>
+
+        <div class="side-box">
+          <img src="/img/champions/ahri.jpg" alt="Campeão favorito">
+          <div class="text">
+            <h3>Campeão Favorito</h3>
+            <p>
+              Campeão com maior número de partidas, melhor desempenho e maior impacto no jogo.
+            </p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="side-box">
-        <img src="/img/champions/ahri.jpg" alt="Campeão favorito">
-        <div class="text">
-          <h3>Campeão Mais Jogado</h3>
-          <p>Ah
+    <!-- ÚLTIMAS PARTIDAS -->
+    <section class="reveal" style="margin-top: 40px;">
+      <h2 class="section-title">Últimas Partidas</h2>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <img class="card-image" src="/img/champions/ahri.jpg" alt="Partida 1">
+          <div class="card-content">
+            <h3>Vitória</h3>
+            <p>Ahri • 12/2/9 • Excelente controle de rota e roaming.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-image" src="/img/champions/yasuo.jpg" alt="Partida 2">
+          <div class="card-content">
+            <h3>Derrota</h3>
+            <p>Yasuo • 7/5/6 • Jogo agressivo, mas com riscos elevados.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-image" src="/img/champions/lux.jpg" alt="Partida 3">
+          <div class="card-content">
+            <h3>Vitória</h3>
+            <p>Lux • 9/1/14 • Alto controle de mapa e visão.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ESTATÍSTICAS -->
+    <section class="reveal" style="margin-top: 40px;">
+      <h2 class="section-title">Estatísticas Gerais</h2>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>62%</h3>
+          <p>Win Rate</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>4.9</h3>
+          <p>KDA Médio</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>7.1</h3>
+          <p>Farm / min</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Alta</h3>
+          <p>Visão</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section reveal">
+      <div class="badge">Evolução</div>
+      <h2>Compare com outros jogadores</h2>
+      <p>
+        Veja quem tem melhor desempenho, maior consistência e impacto nas partidas.
+      </p>
+      <a class="btn" href="/compare">Comparar agora</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    League of Players © 2026
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="/player.js"></script>
+  <script src="/animations.js"></script>
+
+</body>
+</html>
