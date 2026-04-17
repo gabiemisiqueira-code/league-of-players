@@ -7,6 +7,5 @@ function searchPlayer() {
     return;
   }
 
-  // redireciona com o nome na URL
   window.location.href = `/player?name=${encodeURIComponent(name)}`;
 }
