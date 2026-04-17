@@ -1,40 +1,31 @@
-const BACKEND_URL = "https://https://league-of-players.onrender.com"; // depois você troca
+function getPlayerNameFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('name');
+}
 
-const input = document.getElementById("playerSearchInput");
-const button = document.getElementById("playerSearchBtn");
-const hint = document.getElementById("playerSearchHint");
+function loadPlayer() {
+  const name = getPlayerNameFromURL();
 
-const playerName = document.getElementById("playerName");
-const playerLevel = document.getElementById("playerLevel");
-const playerId = document.getElementById("playerId");
+  const playerName = document.getElementById('playerName');
+  const playerInfo = document.getElementById('playerInfo');
 
-button.onclick = async () => {
-  const value = input.value.trim();
-
-  if (!value.includes("#")) {
-    hint.textContent = "Use formato: Nome#TAG";
+  if (!playerName || !playerInfo) {
     return;
   }
 
-  const [name, tag] = value.split("#");
-
-  hint.textContent = "Buscando...";
-
-  try {
-    const res = await fetch(`${BACKEND_URL}/player/${encodeURIComponent(name)}/${encodeURIComponent(tag)}`);
-    const data = await res.json();
-
-    if (!res.ok) {
-      hint.textContent = data.erro || "Erro ao buscar jogador";
-      return;
-    }
-
-    playerName.textContent = `${data.gameName}#${data.tagLine}`;
-    playerLevel.textContent = data.summonerLevel;
-    playerId.textContent = data.id;
-
-    hint.textContent = "Jogador encontrado!";
-  } catch (err) {
-    hint.textContent = "Erro ao conectar com backend";
+  if (!name) {
+    playerName.innerText = 'Nenhum jogador informado';
+    playerInfo.innerText = 'Volte para a home e pesquise um jogador.';
+    return;
   }
-};
+
+  playerName.innerText = name;
+  playerInfo.innerHTML = `
+    Rank: Mestre <br>
+    Win Rate: 62% <br>
+    KDA: 4.9 <br>
+    Campeão favorito: Ahri
+  `;
+}
+
+window.onload = loadPlayer;
