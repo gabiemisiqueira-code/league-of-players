@@ -21,16 +21,13 @@
 
   <section class="hero">
     <div class="hero-content">
-      <div class="badge">Estatísticas • Builds • Ranking • Performance</div>
+      <div class="badge">Estatísticas • Builds • Ranking</div>
       <h2>Entre no Rift com visão de elite</h2>
-      <p>
-        Um portal completo para explorar campeões, comparar jogadores, descobrir builds fortes
-        e acompanhar desempenho com um visual de plataforma premium.
-      </p>
+      <p>Uma home premium para explorar campeões, builds e jogadores.</p>
 
       <div class="search-box">
-        <input type="text" placeholder="Buscar jogador, campeão ou build...">
-        <a class="btn" href="/player">Pesquisar</a>
+        <input id="searchInput" type="text" placeholder="Buscar jogador...">
+        <button class="btn" onclick="searchPlayer()">Pesquisar</button>
       </div>
     </div>
   </section>
@@ -40,138 +37,21 @@
       <div class="stats-grid">
         <div class="stat-card">
           <h3>150+</h3>
-          <p>Campeões para analisar</p>
+          <p>Campeões</p>
         </div>
         <div class="stat-card">
-          <h3>Top 100</h3>
-          <p>Jogadores em destaque</p>
+          <h3>Itens</h3>
+          <p>Guias automáticos</p>
         </div>
         <div class="stat-card">
-          <h3>Builds Meta</h3>
-          <p>Itens e runas vencedoras</p>
+          <h3>Builds</h3>
+          <p>Estrutura pronta</p>
         </div>
         <div class="stat-card">
-          <h3>Comparação</h3>
-          <p>Desempenho lado a lado</p>
+          <h3>Busca</h3>
+          <p>Perfil por nome</p>
         </div>
       </div>
-    </section>
-
-    <section class="reveal" style="margin-top: 42px;">
-      <h2 class="section-title">Explore a Plataforma</h2>
-
-      <div class="card-grid">
-        <div class="card">
-          <img class="card-image" src="/img/champions/ahri.jpg" alt="Campeões">
-          <div class="card-content">
-            <h3>Campeões do Meta</h3>
-            <p>Descubra os mais fortes, os mais jogados e os picks com melhor performance.</p>
-            <a class="btn" href="/champions">Entrar</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-image" src="/img/players/player1.jpg" alt="Jogadores">
-          <div class="card-content">
-            <h3>Perfil de Jogadores</h3>
-            <p>Veja histórico, KDA, taxa de vitória, campeões favoritos e evolução recente.</p>
-            <a class="btn" href="/player">Abrir perfil</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-image" src="/img/champions/yasuo.jpg" alt="Guias e builds">
-          <div class="card-content">
-            <h3>Builds e Guias</h3>
-            <p>Runas, itens, sequência de habilidades e estilos de jogo para vencer mais.</p>
-            <a class="btn" href="/guides">Ver guias</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="premium-panel reveal">
-      <div class="panel-box">
-        <img src="/img/banner.jpg" alt="Painel competitivo">
-        <div class="panel-content">
-          <h3>Painel Competitivo Premium</h3>
-          <p>
-            Acompanhe os melhores jogadores, tendências do meta, campeões dominantes e análises
-            que ajudam a entender o jogo com profundidade.
-          </p>
-          <p>
-            Sua home agora passa sensação de produto real: forte, organizada e pronta para crescer
-            com dados ao vivo no futuro.
-          </p>
-          <a class="btn" href="/compare">Comparar jogadores</a>
-        </div>
-      </div>
-
-      <div class="panel-box">
-        <div class="panel-content">
-          <h3>Em alta agora</h3>
-
-          <div class="mini-list">
-            <div class="mini-item">
-              <strong>Ahri em destaque</strong>
-              Alta mobilidade, bom pickoff e presença forte em partidas decisivas.
-            </div>
-
-            <div class="mini-item">
-              <strong>Yasuo agressivo</strong>
-              Pick explosivo com alto potencial de carry quando encaixado na composição certa.
-            </div>
-
-            <div class="mini-item">
-              <strong>Lux consistente</strong>
-              Segurança, poke e utilidade para controle de mapa e objetivos.
-            </div>
-
-            <div class="mini-item">
-              <strong>Top jogadores</strong>
-              Perfis com melhor win rate, visão e dano médio podem ganhar destaque aqui.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="reveal" style="margin-top: 44px;">
-      <h2 class="section-title">Destaques Principais</h2>
-
-      <div class="highlight-row">
-        <div class="feature-box">
-          <img src="/img/players/player2.jpg" alt="Ranking de jogadores">
-          <div class="text">
-            <h3>Ranking dos Melhores</h3>
-            <p>
-              Uma área feita para exibir os jogadores com maior impacto, performance consistente,
-              histórico forte e destaque visual na plataforma.
-            </p>
-          </div>
-        </div>
-
-        <div class="side-box">
-          <img src="/img/champions/lux.jpg" alt="Builds vencedoras">
-          <div class="text">
-            <h3>Builds que Mais Vencem</h3>
-            <p>
-              Aqui entram os caminhos mais usados, os itens mais eficientes e a leitura prática
-              do que realmente está funcionando.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section reveal">
-      <div class="badge">Projeto em evolução</div>
-      <h2>Seu site já está com cara de plataforma de verdade</h2>
-      <p>
-        Agora ele já transmite presença, organização e valor. O próximo nível é colocar interação,
-        busca real, animações suaves, dados dinâmicos e integração com API.
-      </p>
-      <a class="btn" href="/pro">Ver cenário profissional</a>
     </section>
   </main>
 
@@ -179,6 +59,7 @@
     League of Players © 2026
   </footer>
 
+  <script src="/search.js"></script>
   <script src="/animations.js"></script>
 </body>
 </html>
