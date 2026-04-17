@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>League Stats</title>
+</head>
+<body>
+
+  <h1>Buscar jogador</h1>
+
+  <input id="nome" placeholder="Nome (ex: TenZ)">
+  <input id="tag" placeholder="Tag (ex: NA1)">
+  <button onclick="buscar()">Buscar</button>
+
+  <pre id="resultado"></pre>
+
+  <script>
+    async function buscar() {
+      const nome = document.getElementById("nome").value;
+      const tag = document.getElementById("tag").value;
+
+      const res = await fetch(`http://localhost:3000/buscar/${nome}/${tag}`);
+      const data = await res.json();
+
+      document.getElementById("resultado").innerText =
+        JSON.stringify(data, null, 2);
+    }
+  </script>
+
+</body>
+</html>
