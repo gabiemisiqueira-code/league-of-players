@@ -8,4 +8,4 @@ function searchPlayer() {
   }
 
   window.location.href = `/player?name=${encodeURIComponent(name)}`;
-}
+ }
