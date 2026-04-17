@@ -66,3 +66,27 @@ function renderChampions(champions) {
     <div class="card">
       <img
         class="card-image"
+        src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg"
+        alt="${champion.name}"
+      >
+      <div class="card-content">
+        <h3>${champion.name}</h3>
+        <p><strong>${champion.title}</strong></p>
+        <p>${champion.blurb}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
+championSearch?.addEventListener('input', (event) => {
+  const term = event.target.value.trim().toLowerCase();
+
+  const filtered = allChampions.filter((champion) =>
+    champion.name.toLowerCase().includes(term) ||
+    champion.title.toLowerCase().includes(term)
+  );
+
+  renderChampions(filtered);
+});
+
+window.addEventListener('load', loadChampions);
