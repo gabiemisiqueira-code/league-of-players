@@ -9,9 +9,7 @@ function loadPlayer() {
   const playerName = document.getElementById('playerName');
   const playerInfo = document.getElementById('playerInfo');
 
-  if (!playerName || !playerInfo) {
-    return;
-  }
+  if (!playerName || !playerInfo) return;
 
   if (!name) {
     playerName.innerText = 'Nenhum jogador informado';
