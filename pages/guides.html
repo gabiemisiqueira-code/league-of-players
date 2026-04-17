@@ -1,48 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guias | League of Players</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guias - League of Players</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="dashboard-body">
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
-
-  <header class="navbar">
-    <div class="logo">League of Players</div>
-    <nav class="nav-links">
-      <a href="../index.html">Início</a>
-      <a href="player.html">Jogador</a>
-      <a href="ranking.html">Ranking</a>
-      <a href="champions.html">Campeões</a>
-      <a href="compare.html">Comparar</a>
-      <a href="pro.html">Pro</a>
-      <a href="guides.html">Guias</a>
+<body>
+  <header>
+    <h1>League of Players</h1>
+    <nav>
+      <a href="/ranking">Ranking</a>
+      <a href="/champions">Campeões</a>
+      <a href="/player">Jogador</a>
+      <a href="/compare">Comparar</a>
+      <a href="/guides">Guias</a>
+      <a href="/pro">Pro Players</a>
     </nav>
   </header>
 
-  <main class="dashboard">
-    <section class="page-head">
-      <h1>Guias e Conteúdo</h1>
-      <p>Área forte para SEO, ads e afiliados.</p>
-    </section>
+  <section class="hero" style="background:
+    linear-gradient(rgba(5, 10, 20, 0.55), rgba(5, 10, 20, 0.82)),
+    url('/img/champions/yasuo.jpg') center/cover no-repeat;">
+    <div class="hero-content">
+      <h2>Guias, builds e caminhos para vencer</h2>
+      <p>Escolha melhor suas runas, itens e estilo de jogo com páginas visuais e organizadas.</p>
+    </div>
+  </section>
 
-    <section class="cards-3">
-      <div class="feature-card">
-        <h3>Como subir de elo em 2026</h3>
-        <p>Conteúdo para tráfego orgânico.</p>
+  <main class="container">
+    <h2 class="section-title">Guias em Destaque</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <img class="card-image" src="/img/champions/ahri.jpg" alt="Guia Ahri">
+        <div class="card-content">
+          <h3>Guia de Ahri</h3>
+          <p>Runas, sequência de habilidades, itens principais e dicas para dominar lane phase e roaming.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <h3>Melhores picks para solo queue</h3>
-        <p>Conteúdo que pode atrair busca do Google.</p>
+
+      <div class="card">
+        <img class="card-image" src="/img/champions/yasuo.jpg" alt="Guia Yasuo">
+        <div class="card-content">
+          <h3>Guia de Yasuo</h3>
+          <p>Quando lutar, como encaixar combos, itens fortes e leitura de engage em team fights.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <h3>Guia de matchups</h3>
-        <p>Base excelente para monetizar com audiência.</p>
+
+      <div class="card">
+        <img class="card-image" src="/img/champions/lux.jpg" alt="Guia Lux">
+        <div class="card-content">
+          <h3>Guia de Lux</h3>
+          <p>Controle de distância, poke seguro, builds de dano e formas de dar pickoff com visão.</p>
+        </div>
       </div>
-    </section>
+    </div>
+
+    <div class="highlight-row">
+      <div class="feature-box">
+        <img src="/img/banner.jpg" alt="Builds e estratégia">
+        <div class="text">
+          <h3>Builds Mais Fortes</h3>
+          <p>Descubra quais itens estão vencendo mais, quais combinações escalam melhor e onde adaptar cada build.</p>
+        </div>
+      </div>
+
+      <div class="side-box">
+        <img src="/img/players/player2.jpg" alt="Dicas de gameplay">
+        <div class="text">
+          <h3>Dicas de Gameplay</h3>
+          <p>Não é só build. Aprenda posicionamento, objetivos, controle de wave e decisões que ganham partidas.</p>
+        </div>
+      </div>
+    </div>
   </main>
+
+  <footer>
+    League of Players © 2026
+  </footer>
 </body>
 </html>
