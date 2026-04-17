@@ -205,3 +205,18 @@ footer {
     justify-content: center;
   }
 }
+.text p {
+  color: #dddddd;
+  line-height: 1.6;
+}
+
+.card-content p {
+  font-size: 15px;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.18);
+  padding: 20px;
+  border-radius: 18px;
+  backdrop-filter: blur(2px);
+}
