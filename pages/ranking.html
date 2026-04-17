@@ -10,7 +10,7 @@
   <header>
     <h1>League of Players</h1>
     <nav>
-      <a href="/ranking">Ranking</a>
+      <a href="/ranking">Home</a>
       <a href="/champions">Campeões</a>
       <a href="/player">Jogador</a>
       <a href="/compare">Comparar</a>
@@ -21,73 +21,126 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h2>Os melhores dados do League em um só lugar</h2>
+      <div class="badge">Estatísticas • Builds • Ranking • Performance</div>
+      <h2>Entre no Rift com visão de elite</h2>
       <p>
-        Explore campeões, builds, jogadores, estatísticas e comparações com um visual forte,
-        imersivo e digno de quem vive o Rift.
+        Um portal completo para explorar campeões, comparar jogadores, descobrir builds fortes
+        e acompanhar desempenho com um visual de plataforma premium.
       </p>
+
+      <div class="search-box">
+        <input type="text" placeholder="Buscar jogador, campeão ou build...">
+        <a class="btn" href="/player">Pesquisar</a>
+      </div>
     </div>
   </section>
 
   <main class="container">
-    <h2 class="section-title">Destaques da Plataforma</h2>
-
-    <div class="card-grid">
-      <div class="card">
-        <img class="card-image" src="/img/champions/ahri.jpg" alt="Ahri">
-        <div class="card-content">
-          <h3>Campeões em Alta</h3>
-          <p>Veja os picks mais fortes, os mais jogados e quem está dominando o meta atual.</p>
-          <a class="btn" href="/champions">Ver campeões</a>
+    <section class="stats-bar">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>150+</h3>
+          <p>Campeões para analisar</p>
+        </div>
+        <div class="stat-card">
+          <h3>Top 100</h3>
+          <p>Jogadores em destaque</p>
+        </div>
+        <div class="stat-card">
+          <h3>Builds Meta</h3>
+          <p>Itens e runas vencedoras</p>
+        </div>
+        <div class="stat-card">
+          <h3>Comparação</h3>
+          <p>Desempenho lado a lado</p>
         </div>
       </div>
+    </section>
 
-      <div class="card">
-        <img class="card-image" src="/img/players/player1.jpg" alt="Jogador em destaque">
-        <div class="card-content">
-          <h3>Jogadores em Destaque</h3>
-          <p>Pesquise perfis, histórico recente, desempenho, KDA e consistência de partidas.</p>
-          <a class="btn" href="/player">Buscar jogador</a>
+    <section style="margin-top: 42px;">
+      <h2 class="section-title">Explore a Plataforma</h2>
+
+      <div class="card-grid">
+        <div class="card">
+          <img class="card-image" src="/img/champions/ahri.jpg" alt="Campeões">
+          <div class="card-content">
+            <h3>Campeões do Meta</h3>
+            <p>Descubra os mais fortes, os mais jogados e os picks com melhor performance.</p>
+            <a class="btn" href="/champions">Entrar</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-image" src="/img/players/player1.jpg" alt="Jogadores">
+          <div class="card-content">
+            <h3>Perfil de Jogadores</h3>
+            <p>Veja histórico, KDA, taxa de vitória, campeões favoritos e evolução recente.</p>
+            <a class="btn" href="/player">Abrir perfil</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-image" src="/img/champions/yasuo.jpg" alt="Guias e builds">
+          <div class="card-content">
+            <h3>Builds e Guias</h3>
+            <p>Runas, itens, sequência de habilidades e estilos de jogo para vencer mais.</p>
+            <a class="btn" href="/guides">Ver guias</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="card">
-        <img class="card-image" src="/img/champions/yasuo.jpg" alt="Build forte">
-        <div class="card-content">
-          <h3>Builds Fortes</h3>
-          <p>Descubra itens mais usados, runas vencedoras e combinações com maior taxa de vitória.</p>
-          <a class="btn" href="/guides">Ver guias</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="highlight-row">
-      <div class="feature-box">
-        <img src="/img/champions/lux.jpg" alt="Ranking competitivo">
-        <div class="text">
-          <h3>Ranking Competitivo</h3>
+    <section class="premium-panel">
+      <div class="panel-box">
+        <img src="/img/banner.jpg" alt="Painel competitivo">
+        <div class="panel-content">
+          <h3>Painel Competitivo Premium</h3>
           <p>
-            Acompanhe jogadores de maior impacto, subidas no ranking, desempenho por fila
-            e os nomes que mais estão chamando atenção.
+            Acompanhe os melhores jogadores, tendências do meta, campeões dominantes e análises
+            que ajudam a entender o jogo com profundidade.
           </p>
-        </div>
-      </div>
-
-      <div class="side-box">
-        <img src="/img/players/player2.jpg" alt="Comparação de jogadores">
-        <div class="text">
-          <h3>Comparação Direta</h3>
           <p>
-            Coloque dois jogadores lado a lado e veja quem performa melhor em dano,
-            visão, farm, win rate e consistência.
+            Sua home agora passa sensação de produto real: forte, organizada e pronta para crescer
+            com dados ao vivo no futuro.
           </p>
+          <a class="btn" href="/compare">Comparar jogadores</a>
         </div>
       </div>
-    </div>
-  </main>
 
-  <footer>
-    League of Players © 2026
-  </footer>
-</body>
-</html>
+      <div class="panel-box">
+        <div class="panel-content">
+          <h3>Em alta agora</h3>
+
+          <div class="mini-list">
+            <div class="mini-item">
+              <strong>Ahri em destaque</strong>
+              Alta mobilidade, bom pickoff e presença forte em partidas decisivas.
+            </div>
+
+            <div class="mini-item">
+              <strong>Yasuo agressivo</strong>
+              Pick explosivo com alto potencial de carry quando encaixado na composição certa.
+            </div>
+
+            <div class="mini-item">
+              <strong>Lux consistente</strong>
+              Segurança, poke e utilidade para controle de mapa e objetivos.
+            </div>
+
+            <div class="mini-item">
+              <strong>Top jogadores</strong>
+              Perfis com melhor win rate, visão e dano médio podem ganhar destaque aqui.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 44px;">
+      <h2 class="section-title">Destaques Principais</h2>
+
+      <div class="highlight-row">
+        <div class="feature-box">
+          <img src="/img/players/player2.jpg" alt="Ranking de jogadores">
+          <div class="text">
+            <
