@@ -1,56 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ranking | League of Players</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>League of Players</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="dashboard-body">
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
-
-  <header class="navbar">
-    <div class="logo">League of Players</div>
-    <nav class="nav-links">
-      <a href="../index.html">Início</a>
-      <a href="player.html">Jogador</a>
-      <a href="ranking.html">Ranking</a>
-      <a href="champions.html">Campeões</a>
-      <a href="compare.html">Comparar</a>
-      <a href="pro.html">Pro</a>
-      <a href="guides.html">Guias</a>
+<body>
+  <header>
+    <h1>League of Players</h1>
+    <nav>
+      <a href="/ranking">Ranking</a>
+      <a href="/champions">Campeões</a>
+      <a href="/player">Jogador</a>
+      <a href="/compare">Comparar</a>
+      <a href="/guides">Guias</a>
+      <a href="/pro">Pro Players</a>
     </nav>
   </header>
 
-  <main class="dashboard">
-    <section class="page-head">
-      <h1>Ranking Global</h1>
-      <p>Base visual para ranking, filtros e monetização.</p>
-    </section>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Os melhores dados do League em um só lugar</h2>
+      <p>
+        Explore campeões, builds, jogadores, estatísticas e comparações com um visual forte,
+        imersivo e digno de quem vive o Rift.
+      </p>
+    </div>
+  </section>
 
-    <section class="ranking-table-section">
-      <h2>Top jogadores</h2>
-      <table class="ranking-table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Jogador</th>
-            <th>Elo</th>
-            <th>Win Rate</th>
-            <th>Main</th>
-          </tr>
-        </thead>
-        <tbody id="rankingTableBody">
-          <tr><td>1</td><td>Faker</td><td>Challenger</td><td>67%</td><td>Ahri</td></tr>
-          <tr><td>2</td><td>ShadowKing</td><td>Grandmaster</td><td>64%</td><td>Yasuo</td></tr>
-          <tr><td>3</td><td>VoidOne</td><td>Master</td><td>61%</td><td>Kha'Zix</td></tr>
-          <tr><td>4</td><td>StormBR</td><td>Diamond I</td><td>59%</td><td>Aatrox</td></tr>
-        </tbody>
-      </table>
-    </section>
+  <main class="container">
+    <h2 class="section-title">Destaques da Plataforma</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <img class="card-image" src="/img/champions/ahri.jpg" alt="Ahri">
+        <div class="card-content">
+          <h3>Campeões em Alta</h3>
+          <p>Veja os picks mais fortes, os mais jogados e quem está dominando o meta atual.</p>
+          <a class="btn" href="/champions">Ver campeões</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-image" src="/img/players/player1.jpg" alt="Jogador em destaque">
+        <div class="card-content">
+          <h3>Jogadores em Destaque</h3>
+          <p>Pesquise perfis, histórico recente, desempenho, KDA e consistência de partidas.</p>
+          <a class="btn" href="/player">Buscar jogador</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-image" src="/img/champions/yasuo.jpg" alt="Build forte">
+        <div class="card-content">
+          <h3>Builds Fortes</h3>
+          <p>Descubra itens mais usados, runas vencedoras e combinações com maior taxa de vitória.</p>
+          <a class="btn" href="/guides">Ver guias</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight-row">
+      <div class="feature-box">
+        <img src="/img/champions/lux.jpg" alt="Ranking competitivo">
+        <div class="text">
+          <h3>Ranking Competitivo</h3>
+          <p>
+            Acompanhe jogadores de maior impacto, subidas no ranking, desempenho por fila
+            e os nomes que mais estão chamando atenção.
+          </p>
+        </div>
+      </div>
+
+      <div class="side-box">
+        <img src="/img/players/player2.jpg" alt="Comparação de jogadores">
+        <div class="text">
+          <h3>Comparação Direta</h3>
+          <p>
+            Coloque dois jogadores lado a lado e veja quem performa melhor em dano,
+            visão, farm, win rate e consistência.
+          </p>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <script src="../js/ranking.js"></script>
+  <footer>
+    League of Players © 2026
+  </footer>
 </body>
 </html>
